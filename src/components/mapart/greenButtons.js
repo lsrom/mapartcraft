@@ -91,6 +91,7 @@ class GreenButtons extends Component {
         }
         case "NBT_FOR_VIEW_ONLINE": {
           const t1 = performance.now();
+          const { Mapdat_Bytes, whichMap_x, whichMap_y } = e.data.body;
           console.log(`Created NBT for 'view online' by ${(t1 - t0).toString()}ms`);
           const { NBT_Array } = e.data.body;
           const NBT_Array_gzipped = gzip(new Uint8Array(NBT_Array));
